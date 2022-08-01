@@ -1,0 +1,67 @@
+{% load static %}
+<!doctype html>
+<html lang="en" class="h-100">
+
+    <head>
+
+		<!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <title>login</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'loginstatic.css' %}">
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    </head>
+    <body class="h-100">
+        <div class="background-image"> 
+                <div class="container h-100">
+                    <div class="row h-100 justify-content-center align-items-center">
+                        <div class="col-10 col-md-8 col-lg-6">
+                                <!-- Form -->
+                                <form class="form-example" action="" method="post">
+                                    {% csrf_token %}
+                                    <h1>HARDWARE INVENTORY LOG-IN</h1>
+                                    {% for message in messages %}
+                                    <p class="description">{{message}}</p>
+                                    {% endfor %}
+                                    <!-- Input fields -->
+                                    <div class="form-group">
+                                        <label for="username">Username:</label>
+                                        <input type="text" class="form-control username" id="username" placeholder="Username..." name="username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password:</label>
+                                        <input type="password" class="form-control password" id="password" placeholder="Password..." name="password">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-customized">Login</button>
+                                    
+                                </form>
+                                <!-- Form end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .background-image {
+            background-image: url('{% static "images/ag1.jpg" %}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+    </style>
+</html>

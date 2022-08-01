@@ -1,0 +1,16 @@
+.drop-select{
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    background: none; border: 1px solid #ddd; 
+    font-family: 'Open Sans', sans-serif; font-size: 15px; font-weight: 400; color: #888; 
+    box-shadow: none; 
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    line-height: 1.5;
+    appearance: none;
+    overflow-y: auto;
+}
+
+.drop-select:focus{
+    outline: 0; background: none; border: 1px solid #a365bc; box-shadow: none;
+}
